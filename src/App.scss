@@ -1,0 +1,26 @@
+
+.header{
+    background-color: rgb(72 95 195);
+    height: 3rem;
+    margin-bottom:2.5em;
+    .title{
+        font-size:1.17em;
+        color:white;
+        margin:0;
+        text-align: center;
+        transform: translateY(36%);
+    }
+}
+.card-container{
+    overflow:auto;
+    height: 72vh;
+    margin-bottom: 1rem;
+}
+
+.toast-notification{
+    color: "rgb(72 95 195)";
+    position: "absolute";
+    top: "-90%";
+    left: "40%";
+}
+
