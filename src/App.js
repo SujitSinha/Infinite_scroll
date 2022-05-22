@@ -1,4 +1,4 @@
-import { useState, useEffect, Suspense, lazy } from "react";
+import { useState, useEffect, Suspense, lazy,useCallback } from "react";
 import "./App.css";
 import "./App.scss";
 import Button from "@mui/material/Button";
@@ -60,7 +60,10 @@ function App() {
   };
 
   const handleAdd = () => {
+    if(editUser !== '')
+    {
     addUser();
+    }
   };
 
   const fetchUserData = () => {
@@ -123,11 +126,14 @@ function App() {
         <DialogContent>
           <TextField
             margin="dense"
+            required
             id="name"
             label="Name"
+            value={editUser}
             fullWidth
             variant="standard"
             onChange={(e) => setEditUser(e.target.value)}
+            error={editUser === ''}
           />
           <TextField
             margin="dense"

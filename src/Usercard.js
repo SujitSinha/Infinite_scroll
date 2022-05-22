@@ -156,12 +156,11 @@ function Usercard({ userData }) {
                   <CardActions>
                     <Button size="small" onClick={() => handleOpen(user.id)}>
                       More Details
-                    </Button>
-                  </CardActions>
+                    </Button>                
                   <EditIcon
                     onClick={() => handleUserEdit(user.id)}
                     style={{
-                      marginLeft: "78%",
+                      marginLeft: "44%",
                       marginRight: "5%",
                       marginBottom: "5%",
                     }}
@@ -172,6 +171,7 @@ function Usercard({ userData }) {
                       marginBottom: "5%",
                     }}
                   />
+                  </CardActions>
                 </Card>
               </Grid>
             );
@@ -280,7 +280,7 @@ function Usercard({ userData }) {
       >
         <Alert
           onClose={closeDeleteNotification}
-          severity="error"
+          severity="success"
           sx={{ width: "100%" }}
         >
           User Deleted Successfully!
